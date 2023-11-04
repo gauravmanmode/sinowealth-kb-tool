@@ -32,6 +32,14 @@ pub const PART_RE_K70_BYK800: Part = Part {
     product_id: 0x001a,
 };
 
+pub const PART_NOODLE: Part = Part {
+    flash_size: 61440, // 61440 until bootloader
+    bootloader_size: 4096,
+    page_size: 2048,
+    vendor_id: 0xdead,
+    product_id: 0xbeef,
+};
+
 pub static PARTS: phf::Map<&'static str, Part> = phf_map! {
     "nuphy-air60" => PART_NUPHY_AIR60,
     "nuphy-air75" => PART_NUPHY_AIR60, // same as nuphy-air60
@@ -39,6 +47,7 @@ pub static PARTS: phf::Map<&'static str, Part> = phf_map! {
     "nuphy-halo65" => PART_NUPHY_AIR60, // same as nuphy-air60
     "xinmeng-k916" => PART_XINMENG_K916,
     "re-k70-byk800" => PART_RE_K70_BYK800,
+    "noodle" => PART_NOODLE
 };
 
 impl Part {
