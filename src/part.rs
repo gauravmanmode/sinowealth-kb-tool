@@ -66,4 +66,3 @@ fn test_num_pages() {
     assert_eq!(PART_NUPHY_AIR60.num_pages(), 30)
 }
 
-#build
